@@ -34,13 +34,19 @@ git clone https://github.com/Paulo-Eduardo/worker-threads-performance-test.git
 cd worker-threads-performance-test
 ```
 
-3. Build project on docker:
+3. Install node dependencies:
+
+```
+npm install
+```
+
+4. Build project on docker:
 
 ```
 docker build -t worker-threads-performance-test .
 ```
 
-4. Start the project on port 3000 running only on one core
+5. Start the project on port 3000 running only on one core
 
 ```
 docker run --cpuset-cpus="0" -p 3000:3000 worker-threads-performance-test
